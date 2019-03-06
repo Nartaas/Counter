@@ -28,7 +28,7 @@
     
         
     img{
-        display:none;
+        display:block;
             position:absolute;
                 z-index:-1;
         animation:fadein 3s linear;
@@ -37,7 +37,7 @@
         right: 0;
         margin-right: auto;
         border: 1px white solid;
-        border-radius:10px;        
+               
     }
     
         
@@ -48,14 +48,15 @@
         color:white;
         font-weight: 800;
         border: 1px solid white;
-        border-radius:10px;
+        
         font-size:120px;
         margin-top: 30px;
         margin-left: auto;
         left: 0;
         right: 0;
         margin-right: auto;
-        width:230px;
+                width:230px;
+
         text-align:center;
         outline:none;
         box-shadow: 10px 9px 67px -2px               rgba(0,0,0,0.64);
@@ -74,7 +75,7 @@
         width:60px;
         height:50px;
         border: 1px solid white;
-        border-radius:10px;
+        
         background:rgba(0,0,0,0.5);
         font-size:32px;
         color:white;
@@ -110,7 +111,7 @@
         width:200px;
         height:120px;
         border: 1px solid white;
-        border-radius:10px;
+        
         background:rgba(0,0,0,0.8);
         font-size:45px;
         color:white;
@@ -120,7 +121,7 @@
         left: 0;
         right: 0;
         margin-right: auto;
-         margin-top: 0;
+         margin-top: 180px;
        
         cursor:pointer;
         box-shadow: 10px 9px 67px -2px rgba(0,0,0,0.64);
@@ -154,7 +155,7 @@
         right: 0;
         margin-right: auto;
     background:rgba(0,0,0,0.5);
-        border-radius:10px;
+        
         width:300px;
     } 
     
@@ -170,28 +171,30 @@
         font-size:15px;
         color:#333;
     background:rgba(255,255,255,1);
-        width:80%;
-        margin-top:30px;
+        width:10px;
+        margin-top:10px;
         margin-left: auto;
         left: 0;
         right: 0;
         margin-right: auto;
         border:1px solid #333;
-        border-radius:10px;
+        
         outline:none;
             }
     
     #copy-button{
         display:none;
-        width:80%;
-        font-size:18px;
+        width:15px;
+        padding-top:2px;
+        padding-bottom:2px;
+        font-size:16px;
         cursor:pointer;
-        background:rgba(255, 255, 255,1);
-                border-radius:10px;
+        background:#599AC5;
+                
         text-align:center;
         user-select:none;
-        margin:auto;
-        margin-top:2px;
+        margin:0;
+        
         color:#333;
         transition:0.3s;
     }
@@ -220,7 +223,7 @@
     }
 }
     
-    @media(max-width:320px){
+    @media(max-width:800px){
         input{
         display:block;
         }
@@ -247,19 +250,15 @@
         
         #clipboard-text{
             display:block;
-            width:230px;
+            width:200px;
         }
         
         #copy-button{
         display:block;
-            width:230px;
+            width:200px;
     }
     
     @media(max-width:300px){
-        img{
-        display:block;
-        }
-        
         input{
         width:80%;
             font-size:90px;
@@ -284,11 +283,17 @@
                 } 
         
         #clipboard-text{
-              width:80%;
+              width:70%;
+            float:right;
+            margin-right:11px;
         }
         
         #copy-button{
-               width:80%;
+               width:20%;
+            float:left;
+            margin-top:11px;
+                        margin-left:11px;
+
         
                 
     }
@@ -318,29 +323,62 @@
     
  <div class="starter" onclick="loadCounter()">Start Counter</div>   
     
-        
-  <input id="clipboard-text" class="approve" spellcheck="false" value="approve">
+      
+  <input id="clipboard-text" class="approve" spellcheck="false" value="Approve" style="background: #9BD54B; color:#333;">
        <div id="copy-button" class="copy0">Copy</div>
     
-    <input id="clipboard-text" class="lang-1" spellcheck="false" value="$hindi$">
+    <input id="clipboard-text" class="lang-1" spellcheck="false" value="#Gaming">
        <div id="copy-button" class="copy1">Copy</div>
     
-    <input id="clipboard-text" class="lang-2" spellcheck="false" value="$arabic$">
+    <input id="clipboard-text" class="lang-2" spellcheck="false" value="#PeopleBlogs">
        <div id="copy-button" class="copy2">Copy</div>
     
-    <input id="clipboard-text" class="lang-3" spellcheck="false" value="$spanish$">
+    <input id="clipboard-text" class="lang-3" spellcheck="false" value="#Music">
        <div id="copy-button" class="copy3">Copy</div>
     
-    <input id="clipboard-text" class="lang-4" spellcheck="false" value="$portuguese$">
+    <input id="clipboard-text" class="lang-4" spellcheck="false" value="#NewsPolitics">
        <div id="copy-button" class="copy4">Copy</div>
     
-    <input id="clipboard-text" class="lang-5" spellcheck="false" value="$russian$">
+    <input id="clipboard-text" class="lang-5" spellcheck="false" value="#Entertainment">
        <div id="copy-button" class="copy5">Copy</div>
     
-    <input id="clipboard-text" class="lang-6" spellcheck="false" value="$korean$">
+    <input id="clipboard-text" class="lang-6" spellcheck="false" value="#FilmAnimation">
        <div id="copy-button" class="copy6">Copy</div>
+    
+    <input id="clipboard-text" class="lang-13" spellcheck="false" value="#AdultContent">
+       <div id="copy-button" class="copy13">Copy</div>
+            
+    <input id="clipboard-text" class="lang-7" spellcheck="false" value="#HowtoStyle">
+       <div id="copy-button" class="copy7">Copy</div>
+    
+    <input id="clipboard-text" class="lang-8" spellcheck="false" value="#Education">    
+       <div id="copy-button" class="copy8">Copy</div>
+    
+    <input id="clipboard-text" class="lang-15" spellcheck="false" value="#ArtDocumentary">
+       <div id="copy-button" class="copy15">Copy</div>
+    
+    <input id="clipboard-text" class="lang-9" spellcheck="false" value="#ScienceTechnology">
+       <div id="copy-button" class="copy9">Copy</div>
+    
+    <input id="clipboard-text" class="lang-10" spellcheck="false" value="#TravelEvents">
+       <div id="copy-button" class="copy10">Copy</div>
+    
+    <input id="clipboard-text" class="lang-11" spellcheck="false" value="#PetsAnimals">
+       <div id="copy-button" class="copy11">Copy</div>
+    
+     <input id="clipboard-text" class="lang-14" spellcheck="false" value="#Gambling">
+       <div id="copy-button" class="copy14">Copy</div>
+    
+    <input id="clipboard-text" class="lang-12" spellcheck="false" value="#Other">
+       <div id="copy-button" class="copy12">Copy</div>
+    
+         
+   
+    
+    
  
- 
+  <br><br>
+ <center><p>Copyright &copy; 2018 - RN</p>  </center>
     
 <script>
 
@@ -529,11 +567,65 @@ document.querySelector(".copy6").addEventListener('click', function(){
   document.execCommand("copy");
   });  
     
+document.querySelector(".copy7").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-7");
+  copyText.select();
+  document.execCommand("copy");
+  });                                                        
+
+document.querySelector(".copy8").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-8");
+  copyText.select();
+  document.execCommand("copy");
+  });                                                        
+ 
+document.querySelector(".copy9").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-9");
+  copyText.select();
+  document.execCommand("copy");
+  });                                                        
+    
+document.querySelector(".copy10").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-10");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+document.querySelector(".copy11").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-11");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
+document.querySelector(".copy12").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-12");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
+    document.querySelector(".copy13").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-13");
+  copyText.select();
+  document.execCommand("copy");
+                  }); 
+    
+    document.querySelector(".copy14").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-14");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy15").addEventListener('click', function(){       
+    var copyText = document.querySelector(".lang-15");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
 //STARTER
     function loadCounter() {
-    window.open("https://nartaas.github.io/Counter",
+    window.open("Counter.html",
             "name_your_window",
-               "location=1,status=1,scrollbars=1,resizable=no,width=200,height=1280,menubar=no,             toolbar=no");
+               "location=1,status=1,scrollbars=1,resizable=no,width=220,height=1280,menubar=no,             toolbar=no");
         
 //window.close();
 }
