@@ -19,9 +19,10 @@
     body{
         color:white;
         font-family: 'Montserrat', sans-serif;
-        margin:50px 0px ;
+        margin:0px;
+        padding:0px;
         background:#333;
-                        background-position:center;
+        background-position:center;
         background-repeat:no-repeat;
         overflow:hidden;
                       }
@@ -29,10 +30,11 @@
         
     img{
         display:block;
-            position:absolute;
-                z-index:-1;
+        position:absolute;
+        z-index:-1;
         animation:fadein 3s linear;
-         margin-left: auto;
+        margin-left: auto;
+        top:0;
         left: 0;
         right: 0;
         margin-right: auto;
@@ -41,22 +43,22 @@
     }
     
         
-    input{
-        position:absolute;
+    #input, #chatinput{
+       
         display:none;
         background:rgba(0,0,0,0.5);
         color:white;
         font-weight: 800;
         border: 1px solid white;
-        
-        font-size:120px;
-        margin-top: 30px;
+        height:80px;
+        font-size:50px;
+        margin-top: 10px;
+        margin-bottom:10px;
         margin-left: auto;
         left: 0;
         right: 0;
         margin-right: auto;
-                width:230px;
-
+        width:175px;
         text-align:center;
         outline:none;
         box-shadow: 10px 9px 67px -2px               rgba(0,0,0,0.64);
@@ -68,41 +70,38 @@
         display:none;
            text-align:center;
         animation:fadein 1s linear;
-                
+                        
     }
-
     button{
-        width:60px;
-        height:50px;
+        width:45px;
+        height:40px;
         border: 1px solid white;
-        
         background:rgba(0,0,0,0.5);
-        font-size:32px;
+        font-size:20px;
         color:white;
         outline:none;
-        margin: 200px 10px 0 10px;
+        margin:0 10px;
         cursor:pointer;
         box-shadow: 10px 9px 67px -2px rgba(0,0,0,0.64);
         transition: 0.3s;
     }
     
-    button:hover{
-     width:70px;
-        font-size:42px;
-        height:60px;
-        margin: -5px 5px;
-    }
-            
+                
     #minus:hover, #chatminus:hover{
     color:#5997f9;
+        background:white;
     }
     
     #plus:hover, #chatplus:hover{
     color:#ce4729;
+                background:white;
+
     }
     
     #plus5:hover, #chatplus5:hover{
     color:#e89906;
+                background:white;
+
     }
     
     .starter{
@@ -130,17 +129,10 @@
     }
     
     .starter:hover{
-     width:220px;
-        font-size:50px;
-        height:140px;
+     transform:scale(1.2);
             }
     
-    input:hover{
-    font-size:140px;
-        width:240px;
-        margin-top:20px;
-            }
-    
+        
         
     input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -160,43 +152,116 @@
     } 
     
     
+    .selector{
+        display:none;
+        height:50px;
+        color:white;
+        justify-content:space-between;
+    }
+    
+    .selector h3{
+        height:25px;
+        padding:0 5px;
+        background:#333;
+        border:1px solid white;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    
+   
+    
+   
+    
+    #stnd{
+    background:#599AC5;
+    }
+    
+    
 /*CLIPBOARD SECTION*/
+    
+    .hashtags{
+    margin-top:20px;
+    }
+    
+    .hashtag{
+           
+        display:none;
+    }
+    
+    
+    .languages{
+    margin-top:20px;
+        display:none;
+    }
+    
+    .language{
+    display:flex;
+        
+        display:none;
+    }
+    
+    .blogs{
+    margin-top:20px;
+        display:none;
+    }
+    
+    .blog{
+    display:flex;
+        
+        display:none;
+    }
+    
+    #copy-button:hover + #clipboard-text { background-color: #80d4ff; }
+    
+     #copy-button:active + #clipboard-text { background-color: #0099e6; }
+    
+    
+    .blogs #copy-button:hover + #clipboard-text { background-color: #adebad; }
+    
+    .blogs #copy-button:active + #clipboard-text { background-color: #70db70; }
+    
+    
+    .languages #copy-button:hover + #clipboard-text { background-color: #ff8080; }
+    
+    .languages #copy-button:active + #clipboard-text { background-color: #ff4d4d; }
     
      
        
     #clipboard-text{
-        position:relative;
-        display:none;
+        width:100%;
+         font-size:16px;
         height:25px;
-        font-size:15px;
         color:#333;
-    background:rgba(255,255,255,1);
-        width:10px;
-        margin-top:10px;
-        margin-left: auto;
-        left: 0;
-        right: 0;
-        margin-right: auto;
+        background:rgba(255,255,255,1);
         border:1px solid #333;
-        
         outline:none;
+        text-align:center;
+        transition:0.3s;
+        font-weight:600;
             }
     
     #copy-button{
-        display:none;
-        width:15px;
         padding-top:2px;
-        padding-bottom:2px;
+        border:1px solid #333;
         font-size:16px;
         cursor:pointer;
         background:#599AC5;
-                
         text-align:center;
         user-select:none;
-        margin:0;
-        
         color:#333;
         transition:0.3s;
+    }
+    
+    .blogs #copy-button{
+        
+        background:#70db70;
+        
+    }
+    
+    .languages #copy-button{
+        
+        background:#ff4d4d;
+        
     }
     
     #copy-button:hover{
@@ -204,10 +269,7 @@
         background:rgba(51, 51, 51,1);
     }
     
-     #copy-button:active{
-        color:#15d3ed;
-        font-weight:1000;
-    }
+     
     
       
     
@@ -224,17 +286,24 @@
 }
     
     @media(max-width:800px){
-        input{
+        #input, #chatinput{
         display:block;
         }
         
         .buttons, .chatbuttons{
-        display:block;
-        }
+        display:flex;
+           justify-content:center;
+                    }
         
         .starter{
         display:none;
         }
+        
+        .selector{
+        display:flex;
+        width:50vw;
+            margin:auto;
+    }
         
         body{
         margin:0;
@@ -248,55 +317,39 @@
         display:none;
         }
         
-        #clipboard-text{
-            display:block;
-            width:200px;
-        }
+            .hashtag, .language, .blog{
+    display:flex;
+                width:50vw;
+                margin:5px auto;
+                
         
-        #copy-button{
-        display:block;
-            width:200px;
     }
+        
+        
+       
     
-    @media(max-width:300px){
-        input{
-        width:80%;
-            font-size:90px;
+    @media(max-width:400px){
+        #input, #chatinput{
+        width:175px;
         }
-        input:hover{
-        width:90%;
-            font-size:100px;
-        }
-        button{
-            margin:160px 0px 0px 0px;
-             width:25%;
-            font-size:25px;
+        #input:hover, #chatinput:hover{
+       background:white;
+            color:#333;
+            font-size:45px;
+            
         }
         
-                                    
-                
-        button:hover{
-     width:30%;
-      font-size:32px;
-      margin: -5px -5px;
-            height:55px;
-                } 
-        
-        #clipboard-text{
-              width:70%;
-            float:right;
-            margin-right:11px;
-        }
-        
-        #copy-button{
-               width:20%;
-            float:left;
-            margin-top:11px;
-                        margin-left:11px;
-
-        
-                
+         .selector{
+        width:100vw;
     }
+        
+            .hashtag, .language, .blog{
+                width:100vw;
+        
+    }
+       
+        
+        
     
                 
     
@@ -307,7 +360,7 @@
     
 <body>
     <img src= 'https://source.unsplash.com/800x600/?speed'>
-    <input type="number" value="0" id="input"> 
+    <input type="number" value="0" id="input" class="input"> 
    <div class="buttons">
 <button id="minus"><i class="fas fa-minus"></i></button>
 <button id="plus"><i class="fas fa-plus"></i></button>
@@ -323,54 +376,235 @@
     
  <div class="starter" onclick="loadCounter()">Start Counter</div>   
     
-      
-  <input id="clipboard-text" class="approve" spellcheck="false" value="Approve" style="background: #9BD54B; color:#333;">
-       <div id="copy-button" class="copy0">Copy</div>
     
-    <input id="clipboard-text" class="lang-1" spellcheck="false" value="#Gaming">
-       <div id="copy-button" class="copy1">Copy</div>
+    <div class="selector">
+        <h3 id="stnd">#Stnd</h3>
+        <h3 id="blogs">#Blogs</h3>
+        <h3 id="lang">$Lang$</h3>
+     </div>
     
-    <input id="clipboard-text" class="lang-2" spellcheck="false" value="#PeopleBlogs">
-       <div id="copy-button" class="copy2">Copy</div>
+      <div class="hashtags">          
+          
+       
+     <div class="hashtag">
+        <div id="copy-button" class="copy1">Copy</div>
+  <input id="clipboard-text" class="hashtag1" spellcheck="false" value="#Gaming">
+               </div>
     
-    <input id="clipboard-text" class="lang-3" spellcheck="false" value="#Music">
-       <div id="copy-button" class="copy3">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy2">Copy</div>
+  <input id="clipboard-text" class="hashtag2" spellcheck="false" value="#Music">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy3">Copy</div>
+  <input id="clipboard-text" class="hashtag3" spellcheck="false" value="#FilmAnimation">
+               </div>
     
-    <input id="clipboard-text" class="lang-4" spellcheck="false" value="#NewsPolitics">
-       <div id="copy-button" class="copy4">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy4">Copy</div>
+  <input id="clipboard-text" class="hashtag4" spellcheck="false" value="#Education">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy5">Copy</div>
+  <input id="clipboard-text" class="hashtag5" spellcheck="false" value="#ArtDocumentary">
+               </div>
     
-    <input id="clipboard-text" class="lang-5" spellcheck="false" value="#Entertainment">
-       <div id="copy-button" class="copy5">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy6">Copy</div>
+  <input id="clipboard-text" class="hashtag6" spellcheck="false" value="#Entertainment">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy7">Copy</div>
+  <input id="clipboard-text" class="hashtag7" spellcheck="false" value="#Comedy">
+               </div>
     
-    <input id="clipboard-text" class="lang-6" spellcheck="false" value="#FilmAnimation">
-       <div id="copy-button" class="copy6">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy8">Copy</div>
+  <input id="clipboard-text" class="hashtag8" spellcheck="false" value="#NewsPolitics">
+               </div>
+          
+          <div class="hashtag">
+        <div id="copy-button" class="copy9">Copy</div>
+  <input id="clipboard-text" class="hashtag9" spellcheck="false" value="#AutosVehicles">
+               </div>
     
-    <input id="clipboard-text" class="lang-13" spellcheck="false" value="#AdultContent">
-       <div id="copy-button" class="copy13">Copy</div>
-            
-    <input id="clipboard-text" class="lang-7" spellcheck="false" value="#HowtoStyle">
-       <div id="copy-button" class="copy7">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy10">Copy</div>
+  <input id="clipboard-text" class="hashtag10" spellcheck="false" value="#Gambling">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy11">Copy</div>
+  <input id="clipboard-text" class="hashtag11" spellcheck="false" value="#TravelEvents">
+               </div>
     
-    <input id="clipboard-text" class="lang-8" spellcheck="false" value="#Education">    
-       <div id="copy-button" class="copy8">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy12">Copy</div>
+  <input id="clipboard-text" class="hashtag12" spellcheck="false" value="#HowtoStyle">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy13">Copy</div>
+  <input id="clipboard-text" class="hashtag13" spellcheck="false" value="#KidsContent">
+               </div>
     
-    <input id="clipboard-text" class="lang-15" spellcheck="false" value="#ArtDocumentary">
-       <div id="copy-button" class="copy15">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy14">Copy</div>
+  <input id="clipboard-text" class="hashtag14" spellcheck="false" value="#NonprofitActivism">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy15">Copy</div>
+  <input id="clipboard-text" class="hashtag15" spellcheck="false" value="#PetsAimals">
+               </div>
     
-    <input id="clipboard-text" class="lang-9" spellcheck="false" value="#ScienceTechnology">
-       <div id="copy-button" class="copy9">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy16">Copy</div>
+  <input id="clipboard-text" class="hashtag16" spellcheck="false" value="#Religous">
+               </div>
+          
+          <div class="hashtag">
+        <div id="copy-button" class="copy17">Copy</div>
+  <input id="clipboard-text" class="hashtag17" spellcheck="false" value="#SalesDedicated">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy18">Copy</div>
+  <input id="clipboard-text" class="hashtag18" spellcheck="false" value="#Gaming">
+               </div>
     
-    <input id="clipboard-text" class="lang-10" spellcheck="false" value="#TravelEvents">
-       <div id="copy-button" class="copy10">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy19">Copy</div>
+  <input id="clipboard-text" class="hashtag19" spellcheck="false" value="#ScienceTechnology">
+               </div>
+          
+           <div class="hashtag">
+        <div id="copy-button" class="copy20">Copy</div>
+  <input id="clipboard-text" class="hashtag20" spellcheck="false" value="#Sports">
+               </div>
     
-    <input id="clipboard-text" class="lang-11" spellcheck="false" value="#PetsAnimals">
-       <div id="copy-button" class="copy11">Copy</div>
+    <div class="hashtag">
+        <div id="copy-button" class="copy21">Copy</div>
+  <input id="clipboard-text" class="hashtag21" spellcheck="false" value="#Other">
+               </div>
+          
+          <div class="hashtag">
+        <div id="copy-button" class="copy22">Copy</div>
+  <input id="clipboard-text" class="hashtag22" spellcheck="false" value="Custom" style="background:#333; color:white">
+               </div>
+          
+          <div class="hashtag">
+        <div id="copy-button" class="copy23">Copy</div>
+  <input id="clipboard-text" class="hashtag23" spellcheck="false" value="Custom" style="background:#333; color:white">
+               </div>
+          
+          </div>
     
-     <input id="clipboard-text" class="lang-14" spellcheck="false" value="#Gambling">
-       <div id="copy-button" class="copy14">Copy</div>
     
-    <input id="clipboard-text" class="lang-12" spellcheck="false" value="#Other">
-       <div id="copy-button" class="copy12">Copy</div>
+     <div class="blogs">
+        
+        <div class="blog">
+        <div id="copy-button" class="copy31">Copy</div>
+  <input id="clipboard-text" class="blog1" spellcheck="false" value="#BeautyBlogs">
+               </div>
+        
+         <div class="blog">
+        <div id="copy-button" class="copy32">Copy</div>
+  <input id="clipboard-text" class="blog2" spellcheck="false" value="#ChannelPromotion">
+               </div>
+        
+         <div class="blog">
+        <div id="copy-button" class="copy33">Copy</div>
+  <input id="clipboard-text" class="blog3" spellcheck="false" value="#InterviewPodcastBlog">
+               </div>
+        
+         <div class="blog">
+        <div id="copy-button" class="copy34">Copy</div>
+  <input id="clipboard-text" class="blog4" spellcheck="false" value="#KidsBlogs">
+               </div>
+        
+         <div class="blog">
+        <div id="copy-button" class="copy35">Copy</div>
+  <input id="clipboard-text" class="blog5" spellcheck="false" value="#LifestyleBlogs">
+               </div>
+        
+         <div class="blog">
+        <div id="copy-button" class="copy36">Copy</div>
+  <input id="clipboard-text" class="blog6" spellcheck="false" value="#PoliticsBlogs">
+               </div>
+        
+         <div class="blog">
+        <div id="copy-button" class="copy37">Copy</div>
+  <input id="clipboard-text" class="blog7" spellcheck="false" value="#TechnologyBlogs">
+               </div>
+         
+         <div class="blog">
+        <div id="copy-button" class="copy38">Copy</div>
+  <input id="clipboard-text" class="blog8" spellcheck="false" value="#OtherBlogs">
+               </div>
+        
+        </div>
+    
+    
+    
+    <div class="languages">
+        
+        <div class="language">
+        <div id="copy-button" class="copy41">Copy</div>
+  <input id="clipboard-text" class="language1" spellcheck="false" value="$Spanish$">
+               </div>
+        
+         <div class="language">
+        <div id="copy-button" class="copy42">Copy</div>
+  <input id="clipboard-text" class="language2" spellcheck="false" value="$Portuguese$">
+               </div>
+        
+         <div class="language">
+        <div id="copy-button" class="copy43">Copy</div>
+  <input id="clipboard-text" class="language3" spellcheck="false" value="$Arabic$">
+               </div>
+        
+         <div class="language">
+        <div id="copy-button" class="copy44">Copy</div>
+  <input id="clipboard-text" class="language4" spellcheck="false" value="$Mandarin$">
+               </div>
+        
+         <div class="language">
+        <div id="copy-button" class="copy45">Copy</div>
+  <input id="clipboard-text" class="language5" spellcheck="false" value="$Hindi$">
+               </div>
+        
+         <div class="language">
+        <div id="copy-button" class="copy46">Copy</div>
+  <input id="clipboard-text" class="language6" spellcheck="false" value="$Russian$">
+               </div>
+        
+         <div class="language">
+        <div id="copy-button" class="copy47">Copy</div>
+  <input id="clipboard-text" class="language7" spellcheck="false" value="$Japanese$">
+               </div>
+        
+        <div class="language">
+        <div id="copy-button" class="copy48">Copy</div>
+  <input id="clipboard-text" class="language8" spellcheck="false" value="$Korean$">
+               </div>
+        
+        <div class="language">
+        <div id="copy-button" class="copy49">Copy</div>
+  <input id="clipboard-text" class="language9" spellcheck="false" value="$Vietnamese$">
+               </div>
+        
+        <div class="language">
+        <div id="copy-button" class="copy50">Copy</div>
+  <input id="clipboard-text" class="language10" spellcheck="false" value="$Indonesian$">
+               </div>
+        
+        </div>
+    
+   
     
          
    
@@ -381,8 +615,6 @@
  <center><p>Copyright &copy; 2018 - RN</p>  </center>
     
 <script>
-
-
 //COUNTER  
     
 document.getElementById('plus').addEventListener('click', function(){
@@ -440,10 +672,8 @@ document.getElementById('chatplus5').addEventListener('click', function(){
     
     
     
-
     
 //MOUSEWHEEL CONFIG
-
     
     
 document.getElementById('input').addEventListener('wheel', function(e){
@@ -518,112 +748,303 @@ document.querySelector(".chatbuttons").addEventListener('click', function(){
     if(i >= images.length){
 i=0;
     }
-});    
+});
     
-
+    
+//SELECTOR
+    document.getElementById('stnd').addEventListener('click', function(){
+    document.querySelector('.hashtags').style.display="block";
+    document.querySelector('.languages').style.display="none"; 
+            document.querySelector('.blogs').style.display="none";  
+        document.querySelector('#stnd').style.background="#599AC5";
+        document.querySelector('#blogs').style.background="#333";
+        document.querySelector('#lang').style.background="#333";
+    });
+    
+    
+    document.getElementById('blogs').addEventListener('click', function(){
+    document.querySelector('.hashtags').style.display="none";
+        document.querySelector('.blogs').style.display="block";
+        document.querySelector('.languages').style.display="none";
+        document.querySelector('#blogs').style.background="#70db70";
+        document.querySelector('#stnd').style.background="#333";
+        document.querySelector('#lang').style.background="#333";
+    });
+    
+    
+    document.getElementById('lang').addEventListener('click', function(){
+    document.querySelector('.hashtags').style.display="none";
+        document.querySelector('.languages').style.display="block"; 
+        document.querySelector('.blogs').style.display="none";
+        document.querySelector('#lang').style.background="#ff4d4d";
+        document.querySelector('#blogs').style.background="#333";
+        document.querySelector('#stnd').style.background="#333";
+    });
+    
+    
+    
+    
   
 //CLIPBOARD
-
-document.querySelector(".copy0").addEventListener('click', function(){       
-    var copyText = document.querySelector(".approve");
-  copyText.select();
-  document.execCommand("copy");
-  });                                                        
-        
-     
+    //HASHTAGS
 document.querySelector(".copy1").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-1");
-  copyText.select();
-  document.execCommand("copy");
-  });                                                        
-
-document.querySelector(".copy2").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-2");
-  copyText.select();
-  document.execCommand("copy");
-  });                                                        
- 
-document.querySelector(".copy3").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-3");
-  copyText.select();
-  document.execCommand("copy");
-  });                                                        
-    
-document.querySelector(".copy4").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-4");
-  copyText.select();
-  document.execCommand("copy");
-  }); 
-    
-document.querySelector(".copy5").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-5");
+    var copyText = document.querySelector(".hashtag1");
   copyText.select();
   document.execCommand("copy");
   });
     
-document.querySelector(".copy6").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-6");
+document.querySelector(".copy2").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag2");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
+document.querySelector(".copy3").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag3");
   copyText.select();
   document.execCommand("copy");
   });  
     
+    document.querySelector(".copy4").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag4");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy5").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag5");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
+    document.querySelector(".copy6").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag6");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
 document.querySelector(".copy7").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-7");
+    var copyText = document.querySelector(".hashtag7");
   copyText.select();
   document.execCommand("copy");
-  });                                                        
-
+  });
+    
 document.querySelector(".copy8").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-8");
+    var copyText = document.querySelector(".hashtag8");
   copyText.select();
   document.execCommand("copy");
-  });                                                        
- 
-document.querySelector(".copy9").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-9");
-  copyText.select();
-  document.execCommand("copy");
-  });                                                        
+  });  
     
-document.querySelector(".copy10").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-10");
+    document.querySelector(".copy9").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag9");
   copyText.select();
   document.execCommand("copy");
-  }); 
+  });  
     
-document.querySelector(".copy11").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-11");
+    document.querySelector(".copy10").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag10");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy11").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag11");
   copyText.select();
   document.execCommand("copy");
   });
     
 document.querySelector(".copy12").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-12");
+    var copyText = document.querySelector(".hashtag12");
   copyText.select();
   document.execCommand("copy");
   });
     
-    document.querySelector(".copy13").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-13");
+document.querySelector(".copy13").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag13");
   copyText.select();
   document.execCommand("copy");
-                  }); 
+  });  
     
     document.querySelector(".copy14").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-14");
+    var copyText = document.querySelector(".hashtag14");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy15").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag15");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy16").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag16");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
+document.querySelector(".copy17").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag17");
+  copyText.select();
+  document.execCommand("copy");
+  });
+    
+document.querySelector(".copy18").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag18");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy19").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag19");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy20").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag20");
   copyText.select();
   document.execCommand("copy");
   }); 
     
-    document.querySelector(".copy15").addEventListener('click', function(){       
-    var copyText = document.querySelector(".lang-15");
+    document.querySelector(".copy21").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag21");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy22").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag22");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy23").addEventListener('click', function(){       
+    var copyText = document.querySelector(".hashtag23");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    
+    
+//BLOGS
+    document.querySelector(".copy31").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog1");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy32").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog2");
   copyText.select();
   document.execCommand("copy");
   }); 
+    
+    document.querySelector(".copy33").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog3");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy34").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog4");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy35").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog5");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy36").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog6");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy37").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog7");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy38").addEventListener('click', function(){       
+    var copyText = document.querySelector(".blog8");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    
+    //LANGUAGES
+    
+    document.querySelector(".copy41").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language1");
+  copyText.select();
+  document.execCommand("copy");
+  });  
+    
+    document.querySelector(".copy42").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language2");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy43").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language3");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy44").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language4");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy45").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language5");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy46").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language6");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy47").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language7");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy48").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language8");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy49").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language9");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+    document.querySelector(".copy50").addEventListener('click', function(){       
+    var copyText = document.querySelector(".language10");
+  copyText.select();
+  document.execCommand("copy");
+  }); 
+    
+     
+
     
 //STARTER
     function loadCounter() {
-    window.open("https://nartaas.github.io/Counter/index.html",
+    window.open("CounterHashTag.html",
             "name_your_window",
                "location=1,status=1,scrollbars=1,resizable=no,width=220,height=1280,menubar=no,             toolbar=no");
         
@@ -631,10 +1052,7 @@ document.querySelector(".copy12").addEventListener('click', function(){
 }
  
     
-
                     
-
 </script>
-
 </body>
 </html>
